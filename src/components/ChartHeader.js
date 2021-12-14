@@ -7,11 +7,13 @@ function ChartHeader() {
   const days = useSelector((state) => state.chart.week);
 
   return (
-    <div className="chart__header">
+    <>
+      {/* empty div for the chore header */}
+      <div></div>
       {days.map((day) => (
         <div key={day}>{day}</div>
       ))}
-    </div>
+    </>
   );
 }
 

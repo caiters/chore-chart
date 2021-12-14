@@ -4,6 +4,8 @@ import { Provider } from "react-redux";
 
 import { store } from "./store/store";
 
+import "./App.scss";
+
 import Chart from "./components/Chart";
 import ChartSettings from "./components/ChartSettings";
 

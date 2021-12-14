@@ -1,0 +1,14 @@
+.chart {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  &__header {
+    display: grid;
+  }
+  &--week-5 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.chore-row {
+  grid-column: 1;
+}

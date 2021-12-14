@@ -32,18 +32,20 @@ function ChartSettings() {
           onChange={() => dispatch(toggleWeekend())}
         />
       </div>
-      <div className="input-group">
-        <label htmlFor="weekendPlacement">Weekend Placement</label>
-        <select
-          id="weekendPlacement"
-          onChange={() => dispatch(toggleWeekendPlacement())}
-          value={weekendPlacement}
-        >
-          <option></option>
-          <option value="sandwich">Sandwich (Week starts Sunday)</option>
-          <option value="end">End (Week starts Monday)</option>
-        </select>
-      </div>
+      {showWeekend && (
+        <div className="input-group">
+          <label htmlFor="weekendPlacement">Weekend Placement</label>
+          <select
+            id="weekendPlacement"
+            onChange={() => dispatch(toggleWeekendPlacement())}
+            value={weekendPlacement}
+          >
+            <option></option>
+            <option value="sandwich">Sandwich (Week starts Sunday)</option>
+            <option value="end">End (Week starts Monday)</option>
+          </select>
+        </div>
+      )}
       <div className="input-group">
         <label htmlFor="dayNames">Day of the week names</label>
         <select
